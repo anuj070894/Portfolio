@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {Link} from 'react-router-dom';
 import './about-side-bar.css';
 import profilePic from "../../static/images/anujkumarprofile.png";
-
+import detectMobile from "../../service/detect-mobile";
 import BlogList from './blog-list';
 
 class AboutSideBar extends Component {
@@ -28,6 +28,9 @@ class AboutSideBar extends Component {
   }
 
   setShowSkillsTrue = () => {
+	  if (detectMobile()) {
+		return;
+	  }
 	  if (window.innerWidth < 1024) {
 		  this.setState({
 			  showSkills: false
