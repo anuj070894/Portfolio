@@ -5,9 +5,19 @@ import './contact-page.css';
 import './about-page.css';
 
 class AboutPage extends Component {
+	constructor(props) {
+		super(props);
+		this.mainContainerRef = React.createRef();
+	}
+	componentDidMount() {
+		if (window.innerWidth < 1024) {
+			window.scrollTo({top: this.mainContainerRef.current.offsetTop, behavior: "smooth"});
+		}
+	}
+
   render() {
 	return (
-	  <div className="main-page-container">
+	  <div className="main-page-container" ref={this.mainContainerRef}>
 		  <div className="main-page-container-inner">
 			  <div className="contact-page-main-section">
 				  <div className="contact-page-main-section-title">

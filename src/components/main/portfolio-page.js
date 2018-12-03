@@ -11,6 +11,17 @@ import xdSpecsImg from "../../static/images/xd_specs.png"
 import xdSpecsAiImg from "../../static/images/xd_specs_ai.png"
 import xdPrototypeAnaylitcs from '../../static/images/xd_prototype_analytics.png';
 class PortfolioPage extends Component {
+	constructor(props) {
+		super(props);
+		this.mainContainerRef = React.createRef();
+	}
+
+	componentDidMount() {
+		if (window.innerWidth < 1024) {
+			window.scrollTo({top: this.mainContainerRef.current.offsetTop, behavior: "smooth"});
+		}
+	}
+
   render() {
 	const nextMainSectionClasses = className('contact-page-main-section', 'contact-page-main-section-next');
 	const nextMainSectionTitleClasses = className('contact-page-main-section-title', 'contact-page-main-section-next-title');
@@ -18,7 +29,7 @@ class PortfolioPage extends Component {
 	const skillsPageRowFeatureClasses = className("skills-page-row-col", 'skills-page-row-col-4', 'skills-page-row-feature');
 	const portfolioTimelineClasses =className('portfolio-timeline', 'portfolio-page-timeline');
 	return (
-		<div className="main-page-container">
+		<div className="main-page-container" ref={this.mainContainerRef}>
 		  <div className="main-page-container-inner">
 			  <div className="contact-page-main-section">
 					<div className="contact-page-main-section-title">

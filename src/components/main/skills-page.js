@@ -7,13 +7,24 @@ import './contact-page.css';
 import './skills-page.css';
 
 class SkillsPage extends Component {
+	constructor(props) {
+		super(props);
+		this.mainContainerRef = React.createRef();
+	}
+
+	componentDidMount() {
+		if (window.innerWidth < 1024) {
+			window.scrollTo({top: this.mainContainerRef.current.offsetTop, behavior: "smooth"});
+		}
+	}
+
   render() {
 	const nextMainSectionClasses = className('contact-page-main-section', 'contact-page-main-section-next');
 	const nextMainSectionTitleClasses = className('contact-page-main-section-title', 'contact-page-main-section-next-title');
 	const skillsPageRowClasses = className("skills-page-row", 'skills-page-features');
 	const skillsPageRowFeatureClasses = className("skills-page-row-col", 'skills-page-row-col-4', 'skills-page-row-feature');
 	return (
-		<div className="main-page-container">
+		<div className="main-page-container" ref={this.mainContainerRef}>
 		  <div className="main-page-container-inner">
 			  <div className="contact-page-main-section">
 				<div className="contact-page-main-section-title">

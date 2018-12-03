@@ -4,10 +4,21 @@ import {Link} from 'react-router-dom';
 import './main-page.css';
 
 class MainPage extends Component {
+	constructor(props) {
+		super(props);
+		this.mainContainerRef = React.createRef();
+	}
+
+	componentDidMount() {
+		if (window.innerWidth < 1024) {
+			window.scrollTo({top: this.mainContainerRef.current.offsetTop, behavior: "smooth"});
+		}
+	}
+
   render() {
 	const buttonClasses = className('main-page-home-buttons-item', 'main-page-home-buttons-item-white', 'main-page-home-buttons-item-outline');
     return (
-      <div className="main-page-container">
+      <div className="main-page-container" ref={this.mainContainerRef}>
 		  <div className="main-page-container-inner">
 			  <div className="main-page-container-home-section">
 				  <div className="main-page-container-home-section-inner">

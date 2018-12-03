@@ -5,10 +5,21 @@ import './main-page.css';
 import './contact-page.css';
 
 class ContactPage extends Component {
+	constructor(props) {
+		super(props);
+		this.mainContainerRef = React.createRef();
+	}
+
+	componentDidMount() {
+		if (window.innerWidth < 1024) {
+			window.scrollTo({top: this.mainContainerRef.current.offsetTop, behavior: "smooth"});
+		}
+	}
+
   render() {
 	const contactPageDLClasses = className('contact-page-dl', 'contact-page-dl-vertical');
 	return (
-	  <div className="main-page-container">
+	  <div className="main-page-container" ref={this.mainContainerRef}>
 		  <div className="main-page-container-inner">
 			  <div className="contact-page-main-section">
 				  <div className="contact-page-main-section-title">
