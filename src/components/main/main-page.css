@@ -80,8 +80,16 @@
     border-style: solid;
 }
 
+.main-page-container-home-section-subheading {
+	visibility: visible;
+}
+
 @media (max-width: 1023px) {
 	.main-page-container {
 		margin-left: 0;
+	}
+
+	.main-page-container-home-section-subheading {
+		visibility: hidden;
 	}
 }
