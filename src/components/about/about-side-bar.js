@@ -15,11 +15,23 @@ class AboutSideBar extends Component {
   }
 
   componentDidMount () {
-	  window.addEventListener("resize", this.setShowSkillsTrue);
+	window.addEventListener("resize", this.setShowSkillsTrue);
+  }
+
+  componentWillMount() {
+	if (window.innerWidth < 1024) {
+		this.setState({
+			showSkills: false
+		});
+		return;
+	  }
   }
 
   setShowSkillsTrue = () => {
 	  if (window.innerWidth < 1024) {
+		  this.setState({
+			  showSkills: false
+		  });
 		  return;
 	  }
 	  this.setState({
