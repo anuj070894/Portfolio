@@ -15,7 +15,7 @@ class MainPage extends Component {
 						  Hi, I'm Anuj Kumar.
 					  </div>
 					  <div className="main-page-container-home-section-subheading">
-						  I am a full-stack web developer working on both <b>front-end and sometimes on back-end development.</b>
+						  I am a full-stack web developer working on both <b>front-end and back-end development.</b>
 					  </div>
 					  <div className="main-page-home-buttons">
 					      <Link to="/portfolio" className={buttonClasses}>
