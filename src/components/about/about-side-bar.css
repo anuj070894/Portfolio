@@ -188,4 +188,8 @@
 	.about-side-bar-main-navigation-content {
 		margin-bottom: -48px;
 	}
+
+	.about-side-bar-social {
+		visibility: hidden;
+	}
 }
