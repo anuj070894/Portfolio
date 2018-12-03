@@ -1,0 +1,35 @@
+.blog-list-container {
+	margin: 0;
+	padding: 0;
+	padding-bottom: 45px;
+}
+
+.blog-list-container ul {
+	list-style: none;
+	padding: 0px;
+}
+
+.blog-list-container ul li {
+	margin: 15px 0;
+	padding: 0;
+}
+
+.blog-list-container ul li a {
+	text-decoration: none;
+	color: rgba(255, 255, 255, 0.6);
+	font-size: 14px;
+	font-weight: 300;
+}
+
+.blog-list-container ul li a:hover {
+	text-decoration: none;
+	color: rgba(255, 255, 255, 1);
+}
+
+.blog-list-item-date {
+	color: rgba(204,204,204,.7);
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 300;
+    font-style: italic;
+}

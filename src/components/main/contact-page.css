@@ -1,0 +1,43 @@
+.contact-page-main-section {
+	max-width: 850px;
+	padding: 50px;
+	padding-bottom: 0px;
+    background-color: #fff;
+    color: #333;
+}
+
+.contact-page-main-section-title {
+	line-height: 1;
+    margin-bottom: 15px;
+    color: #555;
+	font-size: 36px;
+    font-weight: 300;
+    text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+}
+
+.contact-page-dl-vertical {
+	overflow: hidden;
+}
+
+.contact-page-dl dt {
+	display: block;
+    float: left;
+    clear: both;
+    width: 150px;
+}
+
+.contact-page-dl dd {
+	display: block;
+    float: left;
+    margin: 0;
+}
+
+.contact-page-dl dd a {
+	color: #BB1E1E;
+    text-decoration: none;
+}
+
+.contact-page-dl dd a span:hover {
+    text-decoration: underline;
+}

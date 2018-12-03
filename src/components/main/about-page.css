@@ -1,0 +1,9 @@
+.about-page-skills-link {
+	color: #BB1E1E;
+	text-decoration: none;
+}
+
+.about-page-skills-link:hover {
+	color: #BB1E1E;
+	text-decoration: underline;
+}

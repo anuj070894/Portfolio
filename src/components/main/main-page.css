@@ -1,0 +1,87 @@
+.main-page-container {
+	margin-left: 25%;
+}
+
+.main-page-container-inner {
+	position: relative;
+}
+
+.main-page-container-home-section {
+	position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: url(../../static/images/coverpic.png) top center no-repeat #bababa;
+    background-size: cover;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+    padding-left: 110px;
+    padding-top: 130px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.6);
+    font-size: 12px;
+}
+
+.main-page-container-home-section-inner {
+	max-width: 840px;
+    margin-left: 25%;
+}
+
+.main-page-container-home-section-heading {
+	font-size: 4em;
+	font-weight: 500;
+}
+
+.main-page-container-home-section-subheading {
+	font-size: 3em;
+    font-weight: 300;
+    text-transform: none;
+}
+
+.main-page-home-buttons {
+	margin-top: 6.25em;
+    overflow: hidden;
+    font-size: 2em;
+    -webkit-animation-name: fadein;
+    animation-name: fadein;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
+
+.main-page-home-buttons-item {
+	display: inline-block;
+    padding: .4em .8em;
+    line-height: 1;
+	margin-right: 1em;
+	text-transform: uppercase;
+    font-weight: 300;
+    text-decoration: none;
+    opacity: .8;
+    box-shadow: 1px 1px 2px rgba(0,0,0,.47);
+    margin-bottom: 1em;
+}
+
+.main-page-home-buttons-item:hover {
+	opacity: 1;
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.74);
+}
+
+.main-page-home-buttons-item-white {
+	color: rgb(255, 255, 255);
+}
+
+.main-page-home-buttons-item-outline {
+	border-width: 1px;
+    border-style: solid;
+}
+
+@media (max-width: 1023px) {
+	.main-page-container {
+		margin-left: 0;
+	}
+}
