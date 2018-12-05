@@ -89,7 +89,16 @@
 		margin-left: 0;
 	}
 
+	.main-page-container-home-section-heading {
+		display: none;
+	}
+
 	.main-page-container-home-section-subheading {
-		visibility: hidden;
+		display: none;
+	}
+
+	.main-page-home-buttons {
+		bottom: 2%;
+		position: absolute;
 	}
 }
