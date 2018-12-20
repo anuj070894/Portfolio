@@ -5,6 +5,12 @@ import './about-side-bar.css';
 import profilePic from "../../static/images/anujkumarprofile.png";
 import detectMobile from "../../service/detect-mobile";
 import BlogList from './blog-list';
+import loader from "../../static/images/grayLoader.gif";
+import ImageLoader from "react-load-image";
+
+const Preloader = (props) => {
+  return <img src={loader} />;
+}
 
 class AboutSideBar extends Component {
   constructor(props) {
@@ -57,7 +63,10 @@ class AboutSideBar extends Component {
 		  <div className="about-side-bar-inner">
 			  <Link to="/" className="about-side-image-name">
 			  	  <div className="about-side-bar-profile-pic-container">
-					  <img src={profilePic} alt="Profile pic of Anuj Kumar" className="about-side-bar-profile-pic"></img>
+					  <ImageLoader src={profilePic}>
+							<img alt="Profile pic of Anuj Kumar" className="about-side-bar-profile-pic"></img>
+							<Preloader />
+						</ImageLoader>
 				  </div>
 				  <div className="about-side-bar-profile-content">
 					  <div className="about-size-bar-name">

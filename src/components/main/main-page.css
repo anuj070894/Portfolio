@@ -13,7 +13,6 @@
     left: 0;
     right: 0;
     z-index: 1;
-    background: url(../../static/images/coverpic.png) top center no-repeat #bababa;
     background-size: cover;
     -webkit-font-smoothing: antialiased;
     color: #fff;
